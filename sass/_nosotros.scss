@@ -1,0 +1,118 @@
+
+/*Page nosotros*/
+
+.grid-mainNosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 4rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.grid-nosotros{
+    display: grid;
+    grid-template-columns: 40rem auto;
+    grid-template-rows: 8rem 5rem auto;
+    grid-template-areas: 
+    "titNosotros titNosotros"
+    "subtQuien imgNosotros"
+    "contenidoNos imgNosotros";
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+.titNosotros{
+    text-align: center;
+    grid-area: titNosotros;
+}
+.subtQuien{
+    text-align: center;
+    grid-area: subtQuien;
+}
+.contenidoNosotros{
+    line-height: 3rem;
+    grid-area: contenidoNos;
+}
+.imgNosotros{
+    grid-area: imgNosotros;
+    img{
+        width: auto;
+        height: auto;
+    }
+}
+.nosotros{
+    background-color: var(--white);
+    margin-top: 4rem;
+    padding: 2rem;
+}
+.horarios{
+    background-color: var(--white);
+    padding: 2rem;
+
+    ul{
+        line-height: 2.5rem;
+        animation-name: anim_horario;
+        animation-iteration-count:5;
+        animation-timing-function: ease-in;
+        animation-duration: 8s;
+        animation-delay: 1s;
+    }
+
+    li{
+        list-style-type:square;
+    }
+}
+.flex-horarios{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@keyframes anim_horario{
+    0%{transform: translate(0rem, 0rem);}
+    50% {transform: translate(-10rem, 0rem);}
+    100% {transform: translate(0rem, 0rem);} 
+}
+.ubicacion{
+    background-color: var(--white);
+    padding: 2rem;
+    text-align: center;
+}
+.flex-ubicacion{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    img{
+        width: auto;
+        height: auto;
+    }
+}
+.contacto{
+    background-color: var(--white);
+    padding: 2rem;
+
+    h2{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+.mail{
+    width: 30rem;
+}
+.mail:focus{
+    transform: scale(1.5);
+    display: block;
+    margin-top: 1rem;
+    margin-left: 7.5rem;
+    outline: solid 0.2rem var(--red);
+}
+.transit-input:focus{
+    transform: scale(1.5);
+    display: block;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    outline: solid 0.2rem var(--red);
+}
+.btn-form{
+    width: 15rem;
+    height: 3rem;
+}
