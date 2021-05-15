@@ -1,0 +1,11 @@
+
+.transition-img--modified{
+    transition: 0.3s;
+  }
+.transition-img--modified:hover{
+    background-color:var(--white);
+    border: solid var(--red);
+}
+.subtitulo{
+    border-bottom: solid 0.15rem var(--black);
+}
